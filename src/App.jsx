@@ -121,23 +121,22 @@ export default function App() {
           <meta charset="UTF-8">
           <title>Cotización Oficial - Aura Horizon Residences - ${pkg.title}</title>
           <style>
-            body { font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; color: #1c1917; margin: 0; padding: 40px; background: #fff; }
-            .header { border-bottom: 2px solid #C2783E; padding-bottom: 20px; display: flex; justify-content: space-between; align-items: center; }
-            .logo { font-size: 22px; font-weight: bold; letter-spacing: 2px; color: #1c1917; }
-            .subtitle { font-size: 10px; color: #78716c; text-transform: uppercase; letter-spacing: 3px; }
-            .badge { background: #fdf8f5; color: #C2783E; border: 1px solid #C2783E; padding: 6px 14px; font-size: 11px; font-weight: bold; border-radius: 6px; display: inline-block; margin-top: 15px; }
-            h1 { font-size: 26px; color: #1c1917; margin-top: 20px; margin-bottom: 5px; }
-            .meta { font-size: 12px; color: #78716c; margin-bottom: 30px; }
-            .box { background: #f9f8f6; border: 1px solid #e7e2dc; padding: 20px; border-radius: 10px; margin-bottom: 25px; }
-            .row { display: flex; justify-content: space-between; padding: 8px 0; border-bottom: 1px solid #e7e2dc; font-size: 13px; }
+            body { font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; color: #1c1917; margin: 0; padding: 30px; background: #fff; }
+            .header { border-bottom: 2px solid #C2783E; padding-bottom: 15px; display: flex; justify-content: space-between; align-items: center; }
+            .logo { font-size: 20px; font-weight: bold; letter-spacing: 2px; color: #1c1917; }
+            .subtitle { font-size: 9px; color: #78716c; text-transform: uppercase; letter-spacing: 2px; }
+            .badge { background: #fdf8f5; color: #C2783E; border: 1px solid #C2783E; padding: 5px 12px; font-size: 10px; font-weight: bold; border-radius: 6px; display: inline-block; margin-top: 12px; }
+            h1 { font-size: 22px; color: #1c1917; margin-top: 15px; margin-bottom: 5px; }
+            .meta { font-size: 11px; color: #78716c; margin-bottom: 20px; }
+            .box { background: #f9f8f6; border: 1px solid #e7e2dc; padding: 15px; border-radius: 8px; margin-bottom: 20px; }
+            .row { display: flex; justify-content: space-between; padding: 6px 0; border-bottom: 1px solid #e7e2dc; font-size: 12px; }
             .row:last-child { border-bottom: none; }
             .label { color: #78716c; font-weight: 500; }
             .value { font-weight: bold; color: #1c1917; }
-            .highlight { color: #C2783E; font-size: 16px; }
-            ul { padding-left: 20px; font-size: 13px; color: #44403c; line-height: 1.6; }
-            li { margin-bottom: 6px; }
-            .footer { margin-top: 40px; border-top: 1px solid #e7e2dc; pt: 20px; font-size: 10px; color: #a8a29e; display: flex; justify-content: space-between; }
-            @media print { body { padding: 20px; } }
+            .highlight { color: #C2783E; font-size: 15px; }
+            ul { padding-left: 18px; font-size: 12px; color: #44403c; line-height: 1.5; }
+            li { margin-bottom: 4px; }
+            .footer { margin-top: 30px; border-top: 1px solid #e7e2dc; padding-top: 15px; font-size: 9px; color: #a8a29e; display: flex; justify-content: space-between; }
           </style>
         </head>
         <body>
@@ -146,7 +145,7 @@ export default function App() {
               <div class="logo">AURA HORIZON</div>
               <div class="subtitle">Residences & Construction • Dossier Oficial de Inversión</div>
             </div>
-            <div style="text-align: right; font-size: 11px; color: #78716c;">
+            <div style="text-align: right; font-size: 10px; color: #78716c;">
               Fecha: ${new Date().toLocaleDateString()}<br>
               Folio: AH-${Math.floor(100000 + Math.random() * 900000)}
             </div>
@@ -157,16 +156,16 @@ export default function App() {
             <div class="meta">Condición comercial aplicada: <strong>${pkg.discount}</strong></div>
           </div>
           <div class="box">
-            <h3 style="margin-top: 0; font-size: 15px; border-bottom: 1px solid #e7e2dc; padding-bottom: 8px;">Desglose Financiero</h3>
+            <h3 style="margin-top: 0; font-size: 14px; border-bottom: 1px solid #e7e2dc; padding-bottom: 6px;">Desglose Financiero</h3>
             <div class="row"><span class="label">Inversión Inicial:</span><span class="value highlight">${pkg.downPayment}</span></div>
             <div class="row"><span class="label">Mensualidad:</span><span class="value">${pkg.monthly}</span></div>
             <div class="row"><span class="label">Pago Final:</span><span class="value">${pkg.finalPayment}</span></div>
           </div>
           <div class="box">
-            <h3 style="margin-top: 0; font-size: 15px; border-bottom: 1px solid #e7e2dc; padding-bottom: 8px;">Beneficios Incluidos</h3>
+            <h3 style="margin-top: 0; font-size: 14px; border-bottom: 1px solid #e7e2dc; padding-bottom: 6px;">Beneficios Incluidos</h3>
             <ul>${pkg.benefits.map(b => `<li>${b}</li>`).join('')}</ul>
           </div>
-          <div style="background: #1c1917; color: #e7e2dc; padding: 15px 20px; border-radius: 8px; font-size: 11px; margin-top: 30px;">
+          <div style="background: #1c1917; color: #e7e2dc; padding: 12px 15px; border-radius: 6px; font-size: 10px; margin-top: 20px;">
             <strong>Aviso Legal:</strong> Precios sujetos a disponibilidad y vigencia de 15 días naturales.
           </div>
           <div class="footer">
@@ -202,21 +201,20 @@ export default function App() {
           <meta charset="UTF-8">
           <title>Simulación Personalizada - Aura Horizon Residences</title>
           <style>
-            body { font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; color: #1c1917; margin: 0; padding: 40px; background: #fff; }
-            .header { border-bottom: 2px solid #C2783E; padding-bottom: 20px; display: flex; justify-content: space-between; align-items: center; }
-            .logo { font-size: 22px; font-weight: bold; letter-spacing: 2px; color: #1c1917; }
-            .subtitle { font-size: 10px; color: #78716c; text-transform: uppercase; letter-spacing: 3px; }
-            .badge { background: #fdf8f5; color: #C2783E; border: 1px solid #C2783E; padding: 6px 14px; font-size: 11px; font-weight: bold; border-radius: 6px; display: inline-block; margin-top: 15px; }
-            h1 { font-size: 26px; color: #1c1917; margin-top: 20px; margin-bottom: 5px; }
-            .meta { font-size: 12px; color: #78716c; margin-bottom: 30px; }
-            .box { background: #f9f8f6; border: 1px solid #e7e2dc; padding: 20px; border-radius: 10px; margin-bottom: 25px; }
-            .row { display: flex; justify-content: space-between; padding: 10px 0; border-bottom: 1px solid #e7e2dc; font-size: 13px; }
+            body { font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; color: #1c1917; margin: 0; padding: 30px; background: #fff; }
+            .header { border-bottom: 2px solid #C2783E; padding-bottom: 15px; display: flex; justify-content: space-between; align-items: center; }
+            .logo { font-size: 20px; font-weight: bold; letter-spacing: 2px; color: #1c1917; }
+            .subtitle { font-size: 9px; color: #78716c; text-transform: uppercase; letter-spacing: 2px; }
+            .badge { background: #fdf8f5; color: #C2783E; border: 1px solid #C2783E; padding: 5px 12px; font-size: 10px; font-weight: bold; border-radius: 6px; display: inline-block; margin-top: 12px; }
+            h1 { font-size: 22px; color: #1c1917; margin-top: 15px; margin-bottom: 5px; }
+            .meta { font-size: 11px; color: #78716c; margin-bottom: 20px; }
+            .box { background: #f9f8f6; border: 1px solid #e7e2dc; padding: 15px; border-radius: 8px; margin-bottom: 20px; }
+            .row { display: flex; justify-content: space-between; padding: 8px 0; border-bottom: 1px solid #e7e2dc; font-size: 12px; }
             .row:last-child { border-bottom: none; }
             .label { color: #78716c; font-weight: 500; }
             .value { font-weight: bold; color: #1c1917; }
-            .highlight { color: #C2783E; font-size: 18px; }
-            .footer { margin-top: 40px; border-top: 1px solid #e7e2dc; pt: 20px; font-size: 10px; color: #a8a29e; display: flex; justify-content: space-between; }
-            @media print { body { padding: 20px; } }
+            .highlight { color: #C2783E; font-size: 16px; }
+            .footer { margin-top: 30px; border-top: 1px solid #e7e2dc; padding-top: 15px; font-size: 9px; color: #a8a29e; display: flex; justify-content: space-between; }
           </style>
         </head>
         <body>
@@ -225,7 +223,7 @@ export default function App() {
               <div class="logo">AURA HORIZON</div>
               <div class="subtitle">Residences & Construction • Cotización de Simulador a la Medida</div>
             </div>
-            <div style="text-align: right; font-size: 11px; color: #78716c;">
+            <div style="text-align: right; font-size: 10px; color: #78716c;">
               Fecha: ${new Date().toLocaleDateString()}<br>
               Folio Simulador: SIM-${Math.floor(100000 + Math.random() * 900000)}
             </div>
@@ -236,22 +234,22 @@ export default function App() {
             <div class="meta">Parámetros configurados directamente en la plataforma web.</div>
           </div>
           <div class="box">
-            <h3 style="margin-top: 0; font-size: 15px; border-bottom: 1px solid #e7e2dc; padding-bottom: 8px;">Parámetros Seleccionados</h3>
+            <h3 style="margin-top: 0; font-size: 14px; border-bottom: 1px solid #e7e2dc; padding-bottom: 6px;">Parámetros Seleccionados</h3>
             <div class="row"><span class="label">Valor Total de la Unidad:</span><span class="value">$${propertyPrice.toLocaleString()} USD</span></div>
             <div class="row"><span class="label">Porcentaje de Enganche (% Inicial):</span><span class="value">${downPaymentPercent}%</span></div>
             <div class="row"><span class="label">Plazo de Obra Diferida:</span><span class="value">${termMonths} Meses</span></div>
           </div>
           <div class="box">
-            <h3 style="margin-top: 0; font-size: 15px; border-bottom: 1px solid #e7e2dc; padding-bottom: 8px;">Resultado del Cálculo</h3>
+            <h3 style="margin-top: 0; font-size: 14px; border-bottom: 1px solid #e7e2dc; padding-bottom: 6px;">Resultado del Cálculo</h3>
             <div class="row"><span class="label">Monto de Inicial (${downPaymentPercent}%):</span><span class="value">$${downPaymentAmount.toLocaleString()} USD</span></div>
             <div class="row"><span class="label">Saldo a la Entrega de Llaves:</span><span class="value">$${remainingBalance.toLocaleString()} USD</span></div>
             <div class="row"><span class="label">Financiamiento Directo:</span><span class="value">0% Intereses con Constructora</span></div>
-            <div class="row" style="margin-top: 10px; background: #fff5ec; padding: 12px; border-radius: 6px;">
-              <span class="label" style="font-size: 14px; font-weight: bold; color: #C2783E;">Pago Mensual Estimado en Obra:</span>
+            <div class="row" style="margin-top: 8px; background: #fff5ec; padding: 10px; border-radius: 6px;">
+              <span class="label" style="font-size: 13px; font-weight: bold; color: #C2783E;">Pago Mensual Estimado en Obra:</span>
               <span class="value highlight">$${Math.round(monthlyPayment).toLocaleString()} USD/mes</span>
             </div>
           </div>
-          <div style="background: #1c1917; color: #e7e2dc; padding: 15px 20px; border-radius: 8px; font-size: 11px; margin-top: 30px;">
+          <div style="background: #1c1917; color: #e7e2dc; padding: 12px 15px; border-radius: 6px; font-size: 10px; margin-top: 20px;">
             <strong>Validez de Cotización:</strong> Esta simulación tiene una vigencia de 7 días naturales. Para proceder con la firma del contrato bajo estas condiciones, agende su cita en nuestro showroom.
           </div>
           <div class="footer">
@@ -417,17 +415,17 @@ export default function App() {
       
       {/* Toast Notification */}
       {toastMessage && (
-        <div className="fixed top-6 right-6 z-50 bg-[#1C1917] text-[#E7E2DC] px-5 py-4 rounded-2xl shadow-2xl border border-[#C2783E]/50 flex items-center gap-3 animate-fade-in backdrop-blur-md">
-          <Download className="w-5 h-5 text-[#C2783E] animate-bounce" />
+        <div className="fixed top-4 right-4 left-4 sm:left-auto sm:right-6 z-50 bg-[#1C1917] text-[#E7E2DC] px-4 py-3 rounded-2xl shadow-2xl border border-[#C2783E]/50 flex items-center gap-3 backdrop-blur-md">
+          <Download className="w-5 h-5 text-[#C2783E] animate-bounce flex-shrink-0" />
           <span className="text-xs sm:text-sm font-medium">{toastMessage}</span>
         </div>
       )}
 
-      {/* Floating WhatsApp & Appointment Action Buttons */}
-      <div className="fixed bottom-6 right-6 z-40 flex items-center gap-3">
+      {/* Floating WhatsApp & Appointment Action Buttons (Optimized for Mobile view) */}
+      <div className="fixed bottom-4 right-4 sm:bottom-6 sm:right-6 z-40 flex items-center gap-2 sm:gap-3">
         <button 
           onClick={handleWhatsAppRedirect}
-          className="bg-[#1C1917] hover:bg-[#292524] text-[#E7E2DC] p-4 rounded-full shadow-2xl transition-all hover:scale-105 flex items-center gap-2 font-medium text-sm group cursor-pointer border border-[#C2783E]/40"
+          className="bg-[#1C1917] hover:bg-[#292524] text-[#E7E2DC] p-3.5 sm:p-4 rounded-full shadow-2xl transition-all hover:scale-105 flex items-center gap-2 font-medium text-sm group cursor-pointer border border-[#C2783E]/40"
           title="Contacto Directo WhatsApp VIP"
         >
           <MessageSquare className="w-5 h-5 text-[#C2783E]" />
@@ -436,24 +434,24 @@ export default function App() {
 
         <button 
           onClick={() => setIsTourModalOpen(true)}
-          className="bg-gradient-to-r from-[#C2783E] to-[#B45309] text-white px-5 py-3.5 rounded-full shadow-2xl transition-all hover:scale-105 flex items-center gap-2 font-bold text-xs uppercase tracking-wider cursor-pointer border border-amber-600/30"
+          className="bg-gradient-to-r from-[#C2783E] to-[#B45309] text-white px-4 sm:px-5 py-3.5 rounded-full shadow-2xl transition-all hover:scale-105 flex items-center gap-2 font-bold text-xs uppercase tracking-wider cursor-pointer border border-amber-600/30"
         >
-          <Calendar className="w-4 h-4" />
-          <span>Agendar Cita</span>
+          <Calendar className="w-4 h-4 flex-shrink-0" />
+          <span className="hidden xs:inline">Agendar Cita</span>
         </button>
       </div>
 
-      {/* Header / Navigation */}
+      {/* Header / Navigation (Responsive adjustments) */}
       <header className="sticky top-0 z-30 bg-[#141210]/90 backdrop-blur-md border-b border-[#292524] transition-all">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
           
-          <div className="flex items-center gap-3">
-            <div className="w-10 h-10 rounded-xl bg-[#1C1917] flex items-center justify-center text-[#C2783E] shadow-md border border-[#C2783E]/30">
-              <Building2 className="w-6 h-6" />
+          <div className="flex items-center gap-2.5 sm:gap-3">
+            <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-xl bg-[#1C1917] flex items-center justify-center text-[#C2783E] shadow-md border border-[#C2783E]/30">
+              <Building2 className="w-5 h-5 sm:w-6 sm:h-6" />
             </div>
             <div>
-              <span className="text-xl font-serif font-bold tracking-wider text-white block leading-none">AURA HORIZON</span>
-              <span className="text-[10px] text-[#A8A29E] tracking-[0.2em] uppercase font-bold">Residences & Construction</span>
+              <span className="text-base sm:text-xl font-serif font-bold tracking-wider text-white block leading-none">AURA HORIZON</span>
+              <span className="text-[9px] sm:text-[10px] text-[#A8A29E] tracking-[0.15em] sm:tracking-[0.2em] uppercase font-bold">Residences</span>
             </div>
           </div>
 
@@ -465,20 +463,20 @@ export default function App() {
             <a href="#calculadora" className="hover:text-[#C2783E] transition-colors">Simulador</a>
           </nav>
 
-          <div className="flex items-center gap-3">
+          <div className="flex items-center gap-2 sm:gap-3">
             <button 
               onClick={() => setIsDossierOpen(true)}
-              className="hidden sm:flex items-center gap-2 text-xs font-semibold text-[#C2783E] hover:text-white px-4 py-2.5 rounded-xl border border-[#C2783E]/30 hover:border-[#C2783E] transition-all cursor-pointer bg-[#1C1917]/50"
+              className="hidden sm:flex items-center gap-2 text-xs font-semibold text-[#C2783E] hover:text-white px-3.5 sm:px-4 py-2.5 rounded-xl border border-[#C2783E]/30 hover:border-[#C2783E] transition-all cursor-pointer bg-[#1C1917]/50"
             >
               <Download className="w-4 h-4 text-[#C2783E]" />
-              <span>Dossier de Precios</span>
+              <span>Dossier</span>
             </button>
 
             <button 
               onClick={() => setIsTourModalOpen(true)}
-              className="bg-[#C2783E] hover:bg-[#B45309] text-white font-bold text-xs uppercase tracking-wider px-5 py-2.5 rounded-xl shadow-md transition-all cursor-pointer border border-amber-600/30"
+              className="bg-[#C2783E] hover:bg-[#B45309] text-white font-bold text-[11px] sm:text-xs uppercase tracking-wider px-3.5 sm:px-5 py-2.5 rounded-xl shadow-md transition-all cursor-pointer border border-amber-600/30"
             >
-              Cita Presencial
+              Cita
             </button>
           </div>
 
@@ -486,61 +484,61 @@ export default function App() {
       </header>
 
       {/* 1. HERO SECTION */}
-      <section id="hero" className="relative pt-12 pb-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
-        <div className="grid lg:grid-cols-12 gap-12 items-center">
+      <section id="hero" className="relative pt-8 sm:pt-12 pb-16 sm:pb-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+        <div className="grid lg:grid-cols-12 gap-8 lg:gap-12 items-center">
           
-          <div className="lg:col-span-7 space-y-6">
-            <div className="inline-flex items-center px-4 py-1.5 rounded-full bg-[#1C1917] border border-[#C2783E]/30 text-[#C2783E]">
-              <span className="text-xs font-semibold uppercase tracking-widest">Preventa Exclusiva 2027</span>
+          <div className="lg:col-span-7 space-y-5 sm:space-y-6">
+            <div className="inline-flex items-center px-3.5 py-1 rounded-full bg-[#1C1917] border border-[#C2783E]/30 text-[#C2783E]">
+              <span className="text-[11px] sm:text-xs font-semibold uppercase tracking-widest">Preventa Exclusiva 2027</span>
             </div>
 
-            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-serif font-bold text-white tracking-tight leading-[1.15]">
+            <h1 className="text-3xl sm:text-5xl lg:text-6xl font-serif font-bold text-white tracking-tight leading-[1.15]">
               Construimos espacios residenciales de lujo con <span className="text-[#C2783E] underline decoration-amber-600/50 underline-offset-8">arquitectura bioclimática</span>
             </h1>
 
-            <p className="text-base sm:text-lg text-stone-300 font-light leading-relaxed max-w-2xl">
+            <p className="text-sm sm:text-lg text-stone-300 font-light leading-relaxed max-w-2xl">
               Residencias exclusivas de <strong>180m² a 350m²</strong> diseñadas para ofrecer máxima plusvalía, aislamiento acústico térmico superior y acabados importados de primera calidad.
             </p>
 
-            <div className="pt-2 flex flex-col sm:flex-row items-stretch sm:items-center gap-4">
+            <div className="pt-1 sm:pt-2 flex flex-col sm:flex-row items-stretch sm:items-center gap-3 sm:gap-4">
               <button 
                 onClick={() => setIsTourModalOpen(true)}
-                className="bg-[#C2783E] hover:bg-[#B45309] text-white font-bold px-7 py-4 rounded-xl shadow-xl hover:scale-[1.02] transition-all flex items-center justify-center gap-3 cursor-pointer text-sm"
+                className="bg-[#C2783E] hover:bg-[#B45309] text-white font-bold px-6 sm:px-7 py-3.5 sm:py-4 rounded-xl shadow-xl hover:scale-[1.02] transition-all flex items-center justify-center gap-2 sm:gap-3 cursor-pointer text-xs sm:text-sm"
               >
-                <Calendar className="w-5 h-5 text-white" />
+                <Calendar className="w-4 h-4 sm:w-5 sm:h-5 text-white flex-shrink-0" />
                 <span>Agendar Recorrido Presencial</span>
-                <ChevronRight className="w-4 h-4" />
+                <ChevronRight className="w-4 h-4 flex-shrink-0" />
               </button>
 
               <button 
                 onClick={() => setIsDossierOpen(true)}
-                className="bg-[#1C1917] hover:bg-[#292524] text-white font-semibold px-6 py-4 rounded-xl border border-[#292524] hover:border-[#C2783E] transition-all flex items-center justify-center gap-2 cursor-pointer text-sm shadow-sm"
+                className="bg-[#1C1917] hover:bg-[#292524] text-white font-semibold px-5 sm:px-6 py-3.5 sm:py-4 rounded-xl border border-[#292524] hover:border-[#C2783E] transition-all flex items-center justify-center gap-2 cursor-pointer text-xs sm:text-sm shadow-sm"
               >
-                <FileText className="w-5 h-5 text-[#C2783E]" />
+                <FileText className="w-4 h-4 sm:w-5 sm:h-5 text-[#C2783E] flex-shrink-0" />
                 <span>Ver Dossier & Cotizaciones</span>
               </button>
             </div>
 
-            <div className="pt-6 border-t border-[#292524] grid grid-cols-3 gap-6">
+            <div className="pt-5 sm:pt-6 border-t border-[#292524] grid grid-cols-3 gap-4 sm:gap-6">
               <div>
-                <span className="block text-2xl font-bold font-serif text-white">18%</span>
-                <span className="text-xs text-stone-400">Plusvalía anual proyectada</span>
+                <span className="block text-xl sm:text-2xl font-bold font-serif text-white">18%</span>
+                <span className="text-[10px] sm:text-xs text-stone-400">Plusvalía anual proyectada</span>
               </div>
               <div>
-                <span className="block text-2xl font-bold font-serif text-white">30/70</span>
-                <span className="text-xs text-stone-400">Esquema de pago diferido</span>
+                <span className="block text-xl sm:text-2xl font-bold font-serif text-white">30/70</span>
+                <span className="text-[10px] sm:text-xs text-stone-400">Esquema de pago diferido</span>
               </div>
               <div>
-                <span className="block text-2xl font-bold font-serif text-white">BREEAM</span>
-                <span className="text-xs text-stone-400">Certificado bioclimático</span>
+                <span className="block text-xl sm:text-2xl font-bold font-serif text-white">BREEAM</span>
+                <span className="text-[10px] sm:text-xs text-stone-400">Certificado bioclimático</span>
               </div>
             </div>
           </div>
 
           <div className="lg:col-span-5" id="video-tour">
-            <div className="bg-[#1C1917] border border-[#292524] rounded-3xl p-4 shadow-2xl relative overflow-hidden group">
+            <div className="bg-[#1C1917] border border-[#292524] rounded-2xl sm:rounded-3xl p-3 sm:p-4 shadow-2xl relative overflow-hidden group">
               
-              <div className="relative rounded-2xl overflow-hidden bg-black aspect-video sm:aspect-square border border-[#292524]">
+              <div className="relative rounded-xl sm:rounded-2xl overflow-hidden bg-black aspect-video sm:aspect-square border border-[#292524]">
                 <video 
                   ref={videoRef}
                   className="w-full h-full object-cover"
@@ -554,54 +552,54 @@ export default function App() {
                   Tu navegador no soporta reproducción de video HTML5.
                 </video>
 
-                <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/20 to-black/40 flex flex-col justify-between p-4">
+                <div className="absolute inset-0 bg-gradient-to-t from-black/85 via-black/20 to-black/40 flex flex-col justify-between p-3 sm:p-4">
                   <div className="flex justify-between items-center">
-                    <span className="px-3 py-1 rounded-full bg-black/60 backdrop-blur-md text-white text-[10px] font-mono uppercase tracking-wider flex items-center gap-1.5 border border-[#C2783E]/40">
-                      <span className="w-2 h-2 rounded-full bg-[#C2783E] animate-ping"></span> Render 4K Recorrido
+                    <span className="px-2.5 sm:px-3 py-1 rounded-full bg-black/60 backdrop-blur-md text-white text-[9px] sm:text-[10px] font-mono uppercase tracking-wider flex items-center gap-1.5 border border-[#C2783E]/40">
+                      <span className="w-1.5 h-1.5 sm:w-2 sm:h-2 rounded-full bg-[#C2783E] animate-ping"></span> Render 4K
                     </span>
 
                     <button 
                       onClick={toggleMute} 
                       className="p-2 rounded-full bg-black/60 backdrop-blur-md text-white hover:bg-black transition-all cursor-pointer border border-white/10"
                     >
-                      {isMuted ? <VolumeX className="w-4 h-4 text-stone-300" /> : <Volume2 className="w-4 h-4 text-[#C2783E]" />}
+                      {isMuted ? <VolumeX className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-stone-300" /> : <Volume2 className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-[#C2783E]" />}
                     </button>
                   </div>
 
                   <div className="flex justify-center items-center">
                     <button 
                       onClick={togglePlay}
-                      className="w-16 h-16 rounded-full bg-[#C2783E] text-white flex items-center justify-center shadow-2xl hover:scale-110 transition-transform cursor-pointer border-2 border-amber-500/50"
+                      className="w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-[#C2783E] text-white flex items-center justify-center shadow-2xl hover:scale-110 transition-transform cursor-pointer border-2 border-amber-500/50"
                     >
-                      {isPlaying ? <Pause className="w-7 h-7 fill-current" /> : <Play className="w-7 h-7 fill-current ml-1" />}
+                      {isPlaying ? <Pause className="w-6 h-6 sm:w-7 sm:h-7 fill-current" /> : <Play className="w-6 h-6 sm:w-7 sm:h-7 fill-current ml-1" />}
                     </button>
                   </div>
 
-                  <div className="flex justify-between items-center text-xs text-white bg-black/40 backdrop-blur-sm p-2 rounded-xl border border-white/5">
-                    <span className="font-mono text-[11px] text-[#C2783E] font-semibold">Residencia Moderna de Lujo • Vista Nocturna</span>
+                  <div className="flex justify-between items-center text-[11px] sm:text-xs text-white bg-black/40 backdrop-blur-sm p-2 rounded-xl border border-white/5">
+                    <span className="font-mono text-[10px] sm:text-[11px] text-[#C2783E] font-semibold truncate pr-2">Residencia Moderna • Vista Nocturna</span>
                     <button 
                       onClick={() => {
                         if (videoRef.current && videoRef.current.requestFullscreen) {
                           videoRef.current.requestFullscreen();
                         }
                       }}
-                      className="text-[10px] text-stone-300 hover:text-white flex items-center gap-1 cursor-pointer"
+                      className="text-[10px] text-stone-300 hover:text-white flex items-center gap-1 cursor-pointer flex-shrink-0"
                     >
-                      <Maximize2 className="w-3.5 h-3.5 text-[#C2783E]" /> Pantalla Completa
+                      <Maximize2 className="w-3.5 h-3.5 text-[#C2783E]" /> <span className="hidden xs:inline">Pantalla Completa</span>
                     </button>
                   </div>
                 </div>
               </div>
 
-              <div className="mt-4 p-2 flex items-center justify-between text-xs text-stone-400">
-                <span className="flex items-center gap-1.5 font-medium text-stone-300">
-                  <ShieldCheck className="w-4 h-4 text-[#C2783E]" /> Renderizado Hiperrealista & Avance de Obra Real
+              <div className="mt-3 sm:mt-4 p-1.5 sm:p-2 flex items-center justify-between text-xs text-stone-400">
+                <span className="flex items-center gap-1.5 font-medium text-stone-300 text-[11px] sm:text-xs">
+                  <ShieldCheck className="w-4 h-4 text-[#C2783E] flex-shrink-0" /> Render Hiperrealista & Obra Real
                 </span>
                 <button 
                   onClick={() => setIsTourModalOpen(true)}
-                  className="text-[#C2783E] font-bold hover:underline cursor-pointer"
+                  className="text-[#C2783E] font-bold hover:underline cursor-pointer text-[11px] sm:text-xs"
                 >
-                  Solicitar Cita &rarr;
+                  Cita &rarr;
                 </button>
               </div>
 
@@ -612,38 +610,38 @@ export default function App() {
       </section>
 
       {/* 2. SOCIAL PROOF */}
-      <section className="py-12 bg-[#1C1917] border-y border-[#292524]">
+      <section className="py-10 sm:py-12 bg-[#1C1917] border-y border-[#292524]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
-            <div className="p-4 border-r border-[#292524] last:border-0">
-              <span className="text-3xl sm:text-4xl font-serif font-bold text-white block mb-1">+120,000 m²</span>
-              <span className="text-xs text-stone-400 font-medium uppercase tracking-wider">Construidos y Entregados</span>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 sm:gap-8 text-center">
+            <div className="p-2 sm:p-4 border-r md:border-r border-[#292524] [&:nth-child(even)]:border-r-0 md:[&:nth-child(even)]:border-r">
+              <span className="text-2xl sm:text-4xl font-serif font-bold text-white block mb-1">+120,000 m²</span>
+              <span className="text-[10px] sm:text-xs text-stone-400 font-medium uppercase tracking-wider">Construidos y Entregados</span>
             </div>
-            <div className="p-4 border-r border-[#292524] last:border-0">
-              <span className="text-3xl sm:text-4xl font-serif font-bold text-white block mb-1">15 Años</span>
-              <span className="text-xs text-stone-400 font-medium uppercase tracking-wider">Trayectoria en el Nicho</span>
+            <div className="p-2 sm:p-4 border-r md:border-r border-[#292524] last:border-0">
+              <span className="text-2xl sm:text-4xl font-serif font-bold text-white block mb-1">15 Años</span>
+              <span className="text-[10px] sm:text-xs text-stone-400 font-medium uppercase tracking-wider">Trayectoria en el Nicho</span>
             </div>
-            <div className="p-4 border-r border-[#292524] last:border-0">
-              <span className="text-3xl sm:text-4xl font-serif font-bold text-white block mb-1">99.4%</span>
-              <span className="text-xs text-stone-400 font-medium uppercase tracking-wider">Cumplimiento en Tiempos</span>
+            <div className="p-2 sm:p-4 border-r md:border-r border-[#292524] [&:nth-child(even)]:border-r-0 md:[&:nth-child(even)]:border-r">
+              <span className="text-2xl sm:text-4xl font-serif font-bold text-white block mb-1">99.4%</span>
+              <span className="text-[10px] sm:text-xs text-stone-400 font-medium uppercase tracking-wider">Cumplimiento en Tiempos</span>
             </div>
-            <div className="p-4">
-              <span className="text-3xl sm:text-4xl font-serif font-bold text-white block mb-1">AA+</span>
-              <span className="text-xs text-stone-400 font-medium uppercase tracking-wider">Calificación de Solvencia</span>
+            <div className="p-2 sm:p-4">
+              <span className="text-2xl sm:text-4xl font-serif font-bold text-white block mb-1">AA+</span>
+              <span className="text-[10px] sm:text-xs text-stone-400 font-medium uppercase tracking-wider">Calificación de Solvencia</span>
             </div>
           </div>
         </div>
       </section>
 
       {/* 3. FLOOR PLAN & GALLERY */}
-      <section id="proyectos" className="py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center max-w-3xl mx-auto mb-12">
+      <section id="proyectos" className="py-16 sm:py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="text-center max-w-3xl mx-auto mb-10 sm:mb-12">
           <span className="text-xs font-mono text-[#C2783E] uppercase tracking-widest block mb-2">Planta Arquitectónica</span>
-          <h2 className="text-3xl sm:text-4xl font-serif font-bold text-white">Explora Nuestras Residencias</h2>
-          <p className="text-stone-400 text-sm mt-3">Pasa el cursor por cada punto interactivo para inspeccionar las 4 características principales de cada tipología.</p>
+          <h2 className="text-2xl sm:text-4xl font-serif font-bold text-white">Explora Nuestras Residencias</h2>
+          <p className="text-stone-400 text-xs sm:text-sm mt-3 px-2">Selecciona una tipología para inspeccionar las características y planos arquitectónicos.</p>
         </div>
 
-        <div className="flex justify-center gap-3 mb-10 overflow-x-auto pb-2">
+        <div className="flex justify-start sm:justify-center gap-2 sm:gap-3 mb-8 sm:mb-10 overflow-x-auto pb-3 px-1 scrollbar-none">
           {Object.keys(floorPlans).map((key) => {
             const plan = floorPlans[key];
             const isActive = selectedFloorPlan === key;
@@ -654,15 +652,15 @@ export default function App() {
                   setSelectedFloorPlan(key);
                   setPropertyPrice(plan.rawPrice);
                 }}
-                className={`px-6 py-3 rounded-xl font-medium text-sm transition-all whitespace-nowrap cursor-pointer flex items-center gap-2 border ${
+                className={`px-4 sm:px-6 py-2.5 sm:py-3 rounded-xl font-medium text-xs sm:text-sm transition-all whitespace-nowrap cursor-pointer flex items-center gap-2 border flex-shrink-0 ${
                   isActive 
                     ? 'bg-[#C2783E] text-white border-[#C2783E] shadow-lg' 
                     : 'bg-[#1C1917] text-stone-300 border-[#292524] hover:border-stone-600'
                 }`}
               >
-                <Building2 className="w-4 h-4 text-white" />
+                <Building2 className="w-4 h-4 text-white flex-shrink-0" />
                 <span>{plan.name}</span>
-                <span className={`text-xs py-0.5 px-2 rounded-full font-mono ${isActive ? 'bg-black/30 text-white' : 'bg-[#292524] text-stone-400'}`}>
+                <span className={`text-[10px] sm:text-xs py-0.5 px-2 rounded-full font-mono ${isActive ? 'bg-black/30 text-white' : 'bg-[#292524] text-stone-400'}`}>
                   {plan.area}
                 </span>
               </button>
@@ -673,13 +671,13 @@ export default function App() {
         {(() => {
           const currentPlan = floorPlans[selectedFloorPlan];
           return (
-            <div className="bg-[#1C1917] border border-[#292524] rounded-3xl p-6 sm:p-8 grid lg:grid-cols-12 gap-8 items-center shadow-2xl">
+            <div className="bg-[#1C1917] border border-[#292524] rounded-2xl sm:rounded-3xl p-5 sm:p-8 grid lg:grid-cols-12 gap-6 sm:gap-8 items-center shadow-2xl">
               
-              <div className="lg:col-span-7 relative rounded-2xl overflow-hidden bg-black border border-[#292524] group">
+              <div className="lg:col-span-7 relative rounded-xl sm:rounded-2xl overflow-hidden bg-black border border-[#292524] group">
                 <img 
                   src={currentPlan.blueprint} 
                   alt={currentPlan.name} 
-                  className="w-full h-[420px] object-cover opacity-85 group-hover:scale-105 transition-transform duration-700"
+                  className="w-full h-[300px] sm:h-[420px] object-cover opacity-85 group-hover:scale-105 transition-transform duration-700"
                 />
                 
                 {currentPlan.hotspots.map((spot) => (
@@ -688,45 +686,45 @@ export default function App() {
                     style={{ top: spot.top, left: spot.left }}
                     className="absolute -translate-x-1/2 -translate-y-1/2 group/spot cursor-pointer"
                   >
-                    <div className="w-8 h-8 rounded-full bg-[#C2783E] text-white font-bold text-xs flex items-center justify-center shadow-xl animate-bounce border-2 border-white">
+                    <div className="w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-[#C2783E] text-white font-bold text-xs flex items-center justify-center shadow-xl animate-bounce border-2 border-white">
                       {spot.id}
                     </div>
-                    <div className="absolute left-1/2 bottom-full mb-2 -translate-x-1/2 w-60 bg-black text-white rounded-xl p-3 shadow-2xl opacity-0 group-hover/spot:opacity-100 transition-opacity pointer-events-none z-20 border border-[#C2783E]/50">
+                    <div className="absolute left-1/2 bottom-full mb-2 -translate-x-1/2 w-52 sm:w-60 bg-black text-white rounded-xl p-3 shadow-2xl opacity-0 group-hover/spot:opacity-100 transition-opacity pointer-events-none z-20 border border-[#C2783E]/50">
                       <h5 className="text-xs font-bold text-[#C2783E] mb-1">{spot.title}</h5>
                       <p className="text-[11px] text-stone-300 leading-tight">{spot.desc}</p>
                     </div>
                   </div>
                 ))}
 
-                <div className="absolute bottom-4 left-4 bg-black/80 backdrop-blur-md px-3 py-1.5 rounded-lg text-xs text-white flex items-center gap-2 border border-white/10">
-                  <Info className="w-4 h-4 text-[#C2783E]" />
+                <div className="absolute bottom-3 left-3 right-3 sm:left-4 sm:right-auto bg-black/80 backdrop-blur-md px-3 py-1.5 rounded-lg text-[11px] sm:text-xs text-white flex items-center gap-2 border border-white/10">
+                  <Info className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-[#C2783E] flex-shrink-0" />
                   <span>Inspecciona los 4 puntos clave interactivos</span>
                 </div>
               </div>
 
-              <div className="lg:col-span-5 space-y-6">
+              <div className="lg:col-span-5 space-y-5 sm:space-y-6">
                 <div>
-                  <span className="text-xs font-mono text-[#C2783E] uppercase tracking-wider block mb-1">{currentPlan.subtitle}</span>
-                  <h3 className="text-3xl font-serif font-bold text-white">{currentPlan.name}</h3>
-                  <div className="text-2xl font-serif font-bold text-[#C2783E] mt-2">{currentPlan.price}</div>
+                  <span className="text-[11px] sm:text-xs font-mono text-[#C2783E] uppercase tracking-wider block mb-1">{currentPlan.subtitle}</span>
+                  <h3 className="text-2xl sm:text-3xl font-serif font-bold text-white">{currentPlan.name}</h3>
+                  <div className="text-xl sm:text-2xl font-serif font-bold text-[#C2783E] mt-2">{currentPlan.price}</div>
                 </div>
 
-                <div className="grid grid-cols-2 gap-4 py-4 border-y border-[#292524]">
+                <div className="grid grid-cols-2 gap-3 sm:gap-4 py-3 sm:py-4 border-y border-[#292524]">
                   <div>
-                    <span className="text-xs text-stone-400 block">Superficie</span>
-                    <span className="text-sm font-bold text-white">{currentPlan.area}</span>
+                    <span className="text-[11px] sm:text-xs text-stone-400 block">Superficie</span>
+                    <span className="text-xs sm:text-sm font-bold text-white">{currentPlan.area}</span>
                   </div>
                   <div>
-                    <span className="text-xs text-stone-400 block">Habitaciones</span>
-                    <span className="text-sm font-bold text-white">{currentPlan.bedrooms} Master Suites</span>
+                    <span className="text-[11px] sm:text-xs text-stone-400 block">Habitaciones</span>
+                    <span className="text-xs sm:text-sm font-bold text-white">{currentPlan.bedrooms} Master Suites</span>
                   </div>
                   <div>
-                    <span className="text-xs text-stone-400 block">Baños</span>
-                    <span className="text-sm font-bold text-white">{currentPlan.bathrooms} Baños</span>
+                    <span className="text-[11px] sm:text-xs text-stone-400 block">Baños</span>
+                    <span className="text-xs sm:text-sm font-bold text-white">{currentPlan.bathrooms} Baños</span>
                   </div>
                   <div>
-                    <span className="text-xs text-stone-400 block">Exterior Privado</span>
-                    <span className="text-sm font-bold text-white">{currentPlan.terrace}</span>
+                    <span className="text-[11px] sm:text-xs text-stone-400 block">Exterior Privado</span>
+                    <span className="text-xs sm:text-sm font-bold text-white">{currentPlan.terrace}</span>
                   </div>
                 </div>
 
@@ -735,7 +733,7 @@ export default function App() {
                     onClick={() => setIsTourModalOpen(true)}
                     className="w-full bg-[#C2783E] hover:bg-[#B45309] text-white font-bold py-3.5 rounded-xl transition-all cursor-pointer shadow-md flex items-center justify-center gap-2 text-xs uppercase tracking-wider"
                   >
-                    <Calendar className="w-4 h-4 text-white" />
+                    <Calendar className="w-4 h-4 text-white flex-shrink-0" />
                     <span>Reservar Visita a esta Planta</span>
                   </button>
 
@@ -743,7 +741,7 @@ export default function App() {
                     onClick={() => setIsDossierOpen(true)}
                     className="w-full bg-[#1C1917] hover:bg-[#292524] text-white font-medium py-3 rounded-xl border border-[#292524] text-xs transition-all cursor-pointer flex items-center justify-center gap-2"
                   >
-                    <Download className="w-4 h-4 text-[#C2783E]" />
+                    <Download className="w-4 h-4 text-[#C2783E] flex-shrink-0" />
                     <span>Descargar Ficha en Dossier</span>
                   </button>
                 </div>
@@ -753,14 +751,14 @@ export default function App() {
           );
         })()}
 
-        <div className="mt-20">
-          <div className="flex flex-col md:flex-row md:items-end justify-between mb-8 gap-4">
+        <div className="mt-16 sm:mt-20">
+          <div className="flex flex-col md:flex-row md:items-end justify-between mb-6 sm:mb-8 gap-4">
             <div>
               <span className="text-xs font-mono text-[#C2783E] uppercase tracking-widest block mb-1">Galería High-Res</span>
-              <h3 className="text-2xl font-serif font-bold text-white">Inspección Visual de Proyectos</h3>
+              <h3 className="text-xl sm:text-2xl font-serif font-bold text-white">Inspección Visual de Proyectos</h3>
             </div>
 
-            <div className="flex flex-wrap gap-2">
+            <div className="flex flex-wrap gap-1.5 sm:gap-2">
               {[
                 { id: 'all', label: 'Ver Todo' },
                 { id: 'interiores', label: 'Interiores' },
@@ -770,7 +768,7 @@ export default function App() {
                 <button
                   key={tab.id}
                   onClick={() => setGalleryFilter(tab.id)}
-                  className={`px-4 py-2 rounded-lg text-xs font-medium transition-all cursor-pointer ${
+                  className={`px-3 sm:px-4 py-2 rounded-lg text-xs font-medium transition-all cursor-pointer ${
                     galleryFilter === tab.id 
                       ? 'bg-[#C2783E] text-white font-bold' 
                       : 'bg-[#1C1917] text-stone-300 hover:bg-[#292524] border border-[#292524]'
@@ -782,12 +780,12 @@ export default function App() {
             </div>
           </div>
 
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
             {filteredGallery.map(item => (
               <div 
                 key={item.id}
                 onClick={() => setLightboxImage(item)}
-                className="group relative h-64 rounded-2xl overflow-hidden cursor-pointer border border-[#292524] bg-black"
+                className="group relative h-60 sm:h-64 rounded-2xl overflow-hidden cursor-pointer border border-[#292524] bg-black"
               >
                 <img 
                   src={item.img} 
@@ -800,7 +798,7 @@ export default function App() {
                     <span className="text-[10px] font-mono uppercase text-[#C2783E] block">{item.cat}</span>
                     <h4 className="text-xs font-bold font-serif">{item.title}</h4>
                   </div>
-                  <Maximize2 className="w-4 h-4 text-[#C2783E]" />
+                  <Maximize2 className="w-4 h-4 text-[#C2783E] flex-shrink-0" />
                 </div>
               </div>
             ))}
@@ -810,13 +808,13 @@ export default function App() {
       </section>
 
       {/* 4. MATERIALS & FINISHES */}
-      <section id="acabados" className="py-20 bg-[#1C1917] border-t border-[#292524]">
+      <section id="acabados" className="py-16 sm:py-20 bg-[#1C1917] border-t border-[#292524]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid lg:grid-cols-12 gap-12 items-center">
-            <div className="lg:col-span-5 space-y-6">
+          <div className="grid lg:grid-cols-12 gap-8 lg:gap-12 items-center">
+            <div className="lg:col-span-5 space-y-5 sm:space-y-6">
               <span className="text-xs font-mono text-[#C2783E] uppercase tracking-widest block">Estándar de Construcción</span>
-              <h2 className="text-3xl font-serif font-bold text-white">Materiales & Acabados Certificados</h2>
-              <p className="text-stone-300 text-sm leading-relaxed">
+              <h2 className="text-2xl sm:text-3xl font-serif font-bold text-white">Materiales & Acabados Certificados</h2>
+              <p className="text-stone-300 text-xs sm:text-sm leading-relaxed">
                 Seleccionamos componentes de grado de ingeniería resistente a zonas costeras y clima tropical, garantizando durabilidad y bajo mantenimiento.
               </p>
 
@@ -825,36 +823,36 @@ export default function App() {
                   <div 
                     key={idx}
                     onClick={() => setSelectedFinish(idx)}
-                    className={`p-4 rounded-2xl cursor-pointer transition-all border ${
+                    className={`p-3.5 sm:p-4 rounded-2xl cursor-pointer transition-all border ${
                       selectedFinish === idx 
                         ? 'bg-[#141210] border-[#C2783E] shadow-md text-white' 
                         : 'bg-black/40 border-[#292524] text-stone-400 hover:border-stone-600'
                     }`}
                   >
                     <div className="flex justify-between items-center mb-1">
-                      <h4 className="text-sm font-bold">{item.name}</h4>
-                      <span className="text-[10px] font-mono text-[#C2783E] uppercase">{item.type}</span>
+                      <h4 className="text-xs sm:text-sm font-bold">{item.name}</h4>
+                      <span className="text-[9px] sm:text-[10px] font-mono text-[#C2783E] uppercase">{item.type}</span>
                     </div>
-                    <p className="text-xs text-stone-400">{item.desc}</p>
+                    <p className="text-[11px] sm:text-xs text-stone-400">{item.desc}</p>
                   </div>
                 ))}
               </div>
             </div>
 
             <div className="lg:col-span-7">
-              <div className="relative h-[400px] rounded-3xl overflow-hidden border border-[#292524] shadow-2xl bg-black">
+              <div className="relative h-[280px] sm:h-[400px] rounded-2xl sm:rounded-3xl overflow-hidden border border-[#292524] shadow-2xl bg-black">
                 <img 
                   src={finishes[selectedFinish].image} 
                   alt={finishes[selectedFinish].name}
                   className="w-full h-full object-cover transition-all duration-700 opacity-90"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-transparent to-transparent"></div>
-                <div className="absolute bottom-6 left-6 right-6 p-4 rounded-2xl bg-[#1C1917]/90 backdrop-blur-md border border-[#292524] flex justify-between items-center">
+                <div className="absolute bottom-4 left-4 right-4 sm:bottom-6 sm:left-6 sm:right-6 p-3.5 sm:p-4 rounded-xl sm:rounded-2xl bg-[#1C1917]/95 backdrop-blur-md border border-[#292524] flex flex-col sm:flex-row justify-between items-start sm:items-center gap-2">
                   <div>
-                    <span className="text-xs text-[#C2783E] font-mono block">Especificación Técnica</span>
-                    <span className="text-sm font-bold text-white">{finishes[selectedFinish].name}</span>
+                    <span className="text-[10px] sm:text-xs text-[#C2783E] font-mono block">Especificación Técnica</span>
+                    <span className="text-xs sm:text-sm font-bold text-white">{finishes[selectedFinish].name}</span>
                   </div>
-                  <span className="px-3 py-1 bg-[#C2783E] text-white text-xs font-semibold rounded-full">
+                  <span className="px-3 py-1 bg-[#C2783E] text-white text-[10px] sm:text-xs font-semibold rounded-full flex-shrink-0">
                     Garantía 10 Años
                   </span>
                 </div>
@@ -865,14 +863,14 @@ export default function App() {
       </section>
 
       {/* 5. INTERACTIVE MORTGAGE & PAYMENT CALCULATOR */}
-      <section id="calculadora" className="py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="bg-[#1C1917] text-white border border-[#292524] rounded-3xl p-8 lg:p-12 shadow-2xl">
-          <div className="grid lg:grid-cols-12 gap-12 items-center">
+      <section id="calculadora" className="py-16 sm:py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="bg-[#1C1917] text-white border border-[#292524] rounded-2xl sm:rounded-3xl p-6 sm:p-8 lg:p-12 shadow-2xl">
+          <div className="grid lg:grid-cols-12 gap-8 lg:gap-12 items-center">
             
-            <div className="lg:col-span-6 space-y-6">
+            <div className="lg:col-span-6 space-y-5 sm:space-y-6">
               <span className="text-xs font-mono text-[#C2783E] uppercase tracking-widest block">Simulaciones de Pago</span>
-              <h2 className="text-3xl font-serif font-bold">Calculadora de Cuota de Preventa</h2>
-              <p className="text-stone-300 text-sm">
+              <h2 className="text-2xl sm:text-3xl font-serif font-bold">Calculadora de Cuota de Preventa</h2>
+              <p className="text-stone-300 text-xs sm:text-sm">
                 Ajusta los parámetros para conocer la cuota mensual durante la fase de construcción de la obra.
               </p>
 
@@ -929,11 +927,11 @@ export default function App() {
             </div>
 
             <div className="lg:col-span-6">
-              <div className="bg-[#141210] border border-[#292524] rounded-2xl p-8 space-y-6 relative overflow-hidden">
-                <div className="border-b border-[#292524] pb-6">
-                  <span className="text-xs text-stone-400 uppercase tracking-wider block mb-1">Pago Mensual Estimado en Obra</span>
-                  <span className="text-4xl sm:text-5xl font-serif font-bold text-[#C2783E] font-mono block">
-                    ${Math.round(monthlyPayment).toLocaleString()} <span className="text-sm font-sans text-stone-300">USD/mes</span>
+              <div className="bg-[#141210] border border-[#292524] rounded-2xl p-5 sm:p-8 space-y-5 sm:space-y-6 relative overflow-hidden">
+                <div className="border-b border-[#292524] pb-5 sm:pb-6">
+                  <span className="text-[11px] sm:text-xs text-stone-400 uppercase tracking-wider block mb-1">Pago Mensual Estimado en Obra</span>
+                  <span className="text-3xl sm:text-5xl font-serif font-bold text-[#C2783E] font-mono block truncate">
+                    ${Math.round(monthlyPayment).toLocaleString()} <span className="text-xs sm:text-sm font-sans text-stone-300">USD/mes</span>
                   </span>
                 </div>
 
@@ -954,9 +952,9 @@ export default function App() {
 
                 <button 
                   onClick={handleDownloadCalculatorPDF}
-                  className="w-full bg-[#C2783E] hover:bg-[#B45309] text-white font-bold py-4 rounded-xl text-xs uppercase tracking-wider transition-all cursor-pointer shadow-lg flex items-center justify-center gap-2"
+                  className="w-full bg-[#C2783E] hover:bg-[#B45309] text-white font-bold py-3.5 sm:py-4 rounded-xl text-xs uppercase tracking-wider transition-all cursor-pointer shadow-lg flex items-center justify-center gap-2"
                 >
-                  <FileText className="w-4 h-4" />
+                  <FileText className="w-4 h-4 flex-shrink-0" />
                   <span>Obtener Cotización Formal en Dossier</span>
                 </button>
               </div>
@@ -967,19 +965,19 @@ export default function App() {
       </section>
 
       {/* FOOTER */}
-      <footer className="bg-[#141210] text-stone-400 text-xs py-12 pb-32 border-t border-[#292524]">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center gap-6">
-          <div className="flex items-center gap-3">
-            <div className="w-8 h-8 rounded bg-[#1C1917] text-[#C2783E] flex items-center justify-center font-bold border border-[#C2783E]/30">
+      <footer className="bg-[#141210] text-stone-400 text-xs py-10 sm:py-12 pb-32 border-t border-[#292524]">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row justify-between items-center gap-6 text-center sm:text-left">
+          <div className="flex flex-col sm:flex-row items-center gap-3">
+            <div className="w-8 h-8 rounded bg-[#1C1917] text-[#C2783E] flex items-center justify-center font-bold border border-[#C2783E]/30 flex-shrink-0">
               AH
             </div>
             <div>
               <span className="font-serif font-bold text-white block">AURA HORIZON BUILDERS</span>
-              <span>© 2026 Desarrollos Inmobiliarios de Lujo.</span>
+              <span className="text-[11px]">© 2026 Desarrollos Inmobiliarios de Lujo.</span>
             </div>
           </div>
 
-          <div className="flex gap-6">
+          <div className="flex flex-wrap justify-center gap-4 sm:gap-6 text-[11px] sm:text-xs">
             <a href="#hero" className="hover:text-[#C2783E]">Privacidad</a>
             <a href="#hero" className="hover:text-[#C2783E]">Términos de Preventa</a>
             <a href="#hero" className="hover:text-[#C2783E]">Licencia Ambiental</a>
@@ -989,27 +987,27 @@ export default function App() {
 
       {/* MODAL 1: DOSSIER DE PRECIOS */}
       {isDossierOpen && (
-        <div className="fixed inset-0 z-50 bg-black/85 backdrop-blur-md flex items-center justify-center p-4 overflow-y-auto">
-          <div className="bg-[#1C1917] border border-[#292524] rounded-3xl max-w-4xl w-full p-6 sm:p-8 relative shadow-2xl my-8 text-white">
+        <div className="fixed inset-0 z-50 bg-black/85 backdrop-blur-md flex items-center justify-center p-3 sm:p-4 overflow-y-auto">
+          <div className="bg-[#1C1917] border border-[#292524] rounded-2xl sm:rounded-3xl max-w-4xl w-full p-4 sm:p-8 relative shadow-2xl my-8 text-white max-h-[90vh] overflow-y-auto">
             
             <button 
               onClick={() => setIsDossierOpen(false)}
-              className="absolute top-6 right-6 text-stone-400 hover:text-white p-2 rounded-full bg-[#292524] cursor-pointer"
+              className="absolute top-4 right-4 sm:top-6 sm:right-6 text-stone-400 hover:text-white p-2 rounded-full bg-[#292524] cursor-pointer"
             >
               <X className="w-5 h-5" />
             </button>
 
-            <div className="mb-8">
-              <span className="text-xs font-mono text-[#C2783E] uppercase tracking-widest block mb-1">Documento Oficial de Cotización</span>
-              <h3 className="text-2xl sm:text-3xl font-serif font-bold text-white">Dossier de Precios & Planes de Inversión</h3>
+            <div className="mb-6 sm:mb-8 pr-8">
+              <span className="text-[11px] sm:text-xs font-mono text-[#C2783E] uppercase tracking-widest block mb-1">Documento Oficial de Cotización</span>
+              <h3 className="text-xl sm:text-3xl font-serif font-bold text-white">Dossier de Precios & Planes de Inversión</h3>
               <p className="text-xs sm:text-sm text-stone-300 mt-1">
                 Selecciona la modalidad de pago que mejor se adecue a tu estrategia financiera o descarga la ficha completa en PDF.
               </p>
             </div>
 
-            <div className="grid md:grid-cols-3 gap-6 mb-8">
+            <div className="grid md:grid-cols-3 gap-4 sm:gap-6 mb-6 sm:mb-8">
               {dossierPackages.map((pkg, idx) => (
-                <div key={idx} className="bg-[#141210] border border-[#292524] rounded-2xl p-5 shadow-sm hover:border-[#C2783E] transition-all flex flex-col justify-between">
+                <div key={idx} className="bg-[#141210] border border-[#292524] rounded-2xl p-4 sm:p-5 shadow-sm hover:border-[#C2783E] transition-all flex flex-col justify-between">
                   <div>
                     <div className="flex items-center justify-between mb-3">
                       <span className="text-[10px] font-bold font-mono px-2.5 py-1 bg-[#C2783E]/20 text-[#C2783E] rounded-md border border-[#C2783E]/30">
@@ -1018,7 +1016,7 @@ export default function App() {
                       <span className="text-[10px] text-stone-400 font-semibold">{pkg.discount}</span>
                     </div>
 
-                    <h4 className="font-serif font-bold text-base text-white mb-2">{pkg.title}</h4>
+                    <h4 className="font-serif font-bold text-sm sm:text-base text-white mb-2">{pkg.title}</h4>
                     
                     <div className="space-y-2 text-xs py-3 border-y border-[#292524] my-3">
                       <div>
@@ -1045,25 +1043,25 @@ export default function App() {
                     onClick={() => handleDownloadPDF(pkg)}
                     className="w-full bg-[#C2783E] hover:bg-[#B45309] text-white text-xs font-semibold py-2.5 rounded-xl transition-all flex items-center justify-center gap-2 cursor-pointer shadow-md"
                   >
-                    <Download className="w-3.5 h-3.5 text-white" />
+                    <Download className="w-3.5 h-3.5 text-white flex-shrink-0" />
                     <span>Descargar PDF</span>
                   </button>
                 </div>
               ))}
             </div>
 
-            <div className="bg-black/50 rounded-2xl p-4 flex flex-col sm:flex-row justify-between items-center gap-4 text-xs text-stone-300 border border-[#292524]">
+            <div className="bg-black/50 rounded-2xl p-3.5 sm:p-4 flex flex-col sm:flex-row justify-between items-center gap-3 text-xs text-stone-300 border border-[#292524] text-center sm:text-left">
               <span className="flex items-center gap-2">
-                <Info className="w-4 h-4 text-[#C2783E]" /> Precios sujetos a ajuste por avance de obra. Validez de cotización: 15 días.
+                <Info className="w-4 h-4 text-[#C2783E] flex-shrink-0" /> Precios sujetos a ajuste por avance de obra. Validez: 15 días.
               </span>
               <button 
                 onClick={() => {
                   setIsDossierOpen(false);
                   setIsTourModalOpen(true);
                 }}
-                className="text-[#C2783E] font-bold underline hover:text-white cursor-pointer"
+                className="text-[#C2783E] font-bold underline hover:text-white cursor-pointer flex-shrink-0"
               >
-                Agendar Cita para Congelar Precio &rarr;
+                Agendar Cita &rarr;
               </button>
             </div>
 
@@ -1073,26 +1071,26 @@ export default function App() {
 
       {/* MODAL 2: TOUR FORM */}
       {isTourModalOpen && (
-        <div className="fixed inset-0 z-50 bg-black/85 backdrop-blur-md flex items-center justify-center p-4 overflow-y-auto">
-          <div className="bg-[#1C1917] border border-[#292524] rounded-3xl max-w-md w-full p-6 sm:p-8 relative shadow-2xl text-white">
+        <div className="fixed inset-0 z-50 bg-black/85 backdrop-blur-md flex items-center justify-center p-3 sm:p-4 overflow-y-auto">
+          <div className="bg-[#1C1917] border border-[#292524] rounded-2xl sm:rounded-3xl max-w-md w-full p-5 sm:p-8 relative shadow-2xl text-white my-8 max-h-[90vh] overflow-y-auto">
             
             <button 
               onClick={() => {
                 setIsTourModalOpen(false);
                 setTourSubmitted(false);
               }}
-              className="absolute top-6 right-6 text-stone-400 hover:text-white p-2 rounded-full bg-[#292524] cursor-pointer"
+              className="absolute top-4 right-4 sm:top-6 sm:right-6 text-stone-400 hover:text-white p-2 rounded-full bg-[#292524] cursor-pointer"
             >
               <X className="w-5 h-5" />
             </button>
 
             {!tourSubmitted ? (
-              <form onSubmit={handleTourFormSubmit} className="space-y-4">
+              <form onSubmit={handleTourFormSubmit} className="space-y-4 pr-6 sm:pr-0">
                 <div>
-                  <span className="text-xs font-mono text-[#C2783E] uppercase tracking-widest block mb-1">Atención Personalizada</span>
-                  <h3 className="text-2xl font-serif font-bold text-white">Agendar Cita Presencial</h3>
+                  <span className="text-[11px] sm:text-xs font-mono text-[#C2783E] uppercase tracking-widest block mb-1">Atención Personalizada</span>
+                  <h3 className="text-xl sm:text-2xl font-serif font-bold text-white">Agendar Cita Presencial</h3>
                   <p className="text-xs text-stone-300 mt-1">
-                    Selecciona tu horario preferido para coordinar la visita a la sala de ventas y showroom de acabados.
+                    Selecciona tu horario preferido para coordinar la visita a la sala de ventas y showroom.
                   </p>
                 </div>
 
@@ -1109,7 +1107,7 @@ export default function App() {
                     />
                   </div>
 
-                  <div className="grid grid-cols-2 gap-3">
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                     <div>
                       <label className="block font-medium text-stone-300 mb-1">Teléfono *</label>
                       <input 
@@ -1134,7 +1132,7 @@ export default function App() {
                     </div>
                   </div>
 
-                  <div className="grid grid-cols-2 gap-3">
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                     <div>
                       <label className="block font-medium text-stone-300 mb-1">Fecha Deseada *</label>
                       <input 
@@ -1208,17 +1206,17 @@ export default function App() {
 
       {/* LIGHTBOX */}
       {lightboxImage && (
-        <div className="fixed inset-0 z-50 bg-black/95 backdrop-blur-xl flex items-center justify-center p-4">
+        <div className="fixed inset-0 z-50 bg-black/95 backdrop-blur-xl flex items-center justify-center p-3 sm:p-4">
           <button 
             onClick={() => setLightboxImage(null)}
-            className="absolute top-6 right-6 text-stone-400 hover:text-white p-2 rounded-full bg-stone-900 border border-[#292524] cursor-pointer"
+            className="absolute top-4 right-4 sm:top-6 sm:right-6 text-stone-400 hover:text-white p-2 rounded-full bg-stone-900 border border-[#292524] cursor-pointer z-10"
           >
             <X className="w-6 h-6" />
           </button>
           <div className="max-w-4xl w-full">
-            <img src={lightboxImage.img} alt={lightboxImage.title} className="w-full h-auto max-h-[80vh] object-contain rounded-2xl border border-[#292524]" />
+            <img src={lightboxImage.img} alt={lightboxImage.title} className="w-full h-auto max-h-[75vh] object-contain rounded-2xl border border-[#292524]" />
             <div className="mt-4 text-center">
-              <h4 className="text-lg font-serif font-bold text-white">{lightboxImage.title}</h4>
+              <h4 className="text-base sm:text-lg font-serif font-bold text-white">{lightboxImage.title}</h4>
               <span className="text-xs text-[#C2783E] uppercase font-mono">{lightboxImage.cat}</span>
             </div>
           </div>
